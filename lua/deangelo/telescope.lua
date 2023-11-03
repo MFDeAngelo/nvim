@@ -3,8 +3,8 @@ require('telescope').setup{
         file_ignore_patterns = {
             ".git",
             ".vs",
-            "bin/.*",
-            "obj/.*"
+            "bin/",
+            "obj/"
         }
     }
 }

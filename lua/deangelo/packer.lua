@@ -19,4 +19,7 @@ return require('packer').startup(function(use)
   use 'prabirshrestha/asyncomplete.vim'
   use 'dense-analysis/ale'
 
+  use 'Mofiqul/dracula.nvim'
+  use 'flazz/vim-colorschemes'
+
 end)
