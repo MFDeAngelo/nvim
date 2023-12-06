@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'BurntSushi/ripgrep'
 
   use 'sindrets/diffview.nvim'
 
@@ -19,7 +20,8 @@ return require('packer').startup(function(use)
   use 'prabirshrestha/asyncomplete.vim'
   use 'dense-analysis/ale'
 
-  use 'Mofiqul/dracula.nvim'
   use 'flazz/vim-colorschemes'
+
+  use 'szw/vim-g'
 
 end)
