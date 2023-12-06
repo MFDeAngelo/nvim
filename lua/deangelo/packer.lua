@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
 
   use 'sindrets/diffview.nvim'
 
-  use 'neovim/nvim-lspconfig'
+--  use 'neovim/nvim-lspconfig'
   use 'OmniSharp/omnisharp-vim'
   use 'prabirshrestha/asyncomplete.vim'
   use 'dense-analysis/ale'
