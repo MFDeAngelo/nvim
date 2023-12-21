@@ -11,3 +11,9 @@ vim.opt.expandtab = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = 'yes'
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    command = "setlocal complete+=kspell"
+})
+
+
