@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use 'OmniSharp/omnisharp-vim'
   use 'prabirshrestha/asyncomplete.vim'
   use 'dense-analysis/ale'
+  use 'puremourning/vimspector'
 
   use 'flazz/vim-colorschemes'
 
