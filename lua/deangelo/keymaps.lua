@@ -5,6 +5,7 @@ vim.keymap.set('n', '<leader><C-t>', '<Cmd>wall<CR><Cmd>!dotnet test<CR>')
 vim.keymap.set('n', '-', '<Cmd>Ex<CR>')
 
 
+
 -- Google --
 vim.keymap.set('n', '<leader>g', ':Google ')
 
