@@ -10,6 +10,7 @@ vim.keymap.set('n', '-', '<Cmd>Ex<CR>')
 vim.keymap.set('n', '<leader>g', ':Google ')
 
 -- Debugger --
-
+vim.g.vimspector_enable_mappings = 'HUMAN'
+-- https://github.com/puremourning/vimspector?tab=readme-ov-file#human-mode
 
 --vim.keymap.set('n', '<leader>b', '
