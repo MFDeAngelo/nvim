@@ -4,7 +4,8 @@ require('telescope').setup{
             ".git",
             ".vs",
             "bin/",
-            "obj/"
+            "obj/",
+            "wwwroot/"
         }
     }
 }
