@@ -15,11 +15,12 @@ return require('packer').startup(function(use)
 
   use 'sindrets/diffview.nvim'
 
---  use 'neovim/nvim-lspconfig'
-  use 'OmniSharp/omnisharp-vim'
-  use 'prabirshrestha/asyncomplete.vim'
-  use 'dense-analysis/ale'
-  use 'puremourning/vimspector'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'mfussenegger/nvim-dap'
+  use 'hrsh7th/nvim-cmp'
+  use 'L3MON4D3/LuaSnip'
 
   use 'flazz/vim-colorschemes'
 
