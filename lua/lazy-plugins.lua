@@ -36,6 +36,8 @@ require('lazy').setup({
 
   require 'kickstart/plugins/lspconfig',
 
+  require 'kickstart/plugins/none-ls',
+
   require 'kickstart/plugins/conform',
 
   require 'kickstart/plugins/cmp',
@@ -44,9 +46,9 @@ require('lazy').setup({
 
   require 'kickstart/plugins/todo-comments',
 
-  require 'kickstart/plugins/mini',
-
   require 'kickstart/plugins/fugitive',
+
+  require 'kickstart/plugins/surround',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
