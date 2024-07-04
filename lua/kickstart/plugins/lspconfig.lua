@@ -106,13 +106,12 @@ return {
             eslint = {
               autoFixOnSave = true,
               format = {
-                enable = true
-              }
-            }
-          }
+                enable = true,
+              },
+            },
+          },
         },
 
-        omnisharp_mono = {},
         pyright = {},
 
         lua_ls = {
