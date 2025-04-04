@@ -83,23 +83,6 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
-        -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-
-        --[[
-        tsserver = {
-          settings ={
-            javascript ={
-              format = {
-                -- insertSpaceBeforeFunctionParenthesis = true
-              }
-            }
-          }
-        },
-        --]]
 
         eslint = {
           settings = {
@@ -111,8 +94,6 @@ return {
             },
           },
         },
-
-        pyright = {},
 
         lua_ls = {
           -- cmd = {...},
