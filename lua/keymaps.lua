@@ -33,3 +33,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- Git diff
+vim.keymap.set('n', '<leader>gd', '<cmd>:DiffviewOpen<CR>', { desc = 'Open [G]it [D]iff' })
+vim.keymap.set('n', '<leader>gh', '<cmd>:DiffviewFileHistory<CR>', { desc = 'Open [G]it [H]istory' })
