@@ -35,5 +35,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Git diff
-vim.keymap.set('n', '<leader>gd', '<cmd>:DiffviewOpen<CR>', { desc = 'Open [G]it [D]iff' })
-vim.keymap.set('n', '<leader>gh', '<cmd>:DiffviewFileHistory<CR>', { desc = 'Open [G]it [H]istory' })
+vim.keymap.set('n', '<leader>gd', '<cmd>:DiffviewOpen<CR>', { desc = '[G]it [D]iff' })
+vim.keymap.set('n', '<leader>gh', '<cmd>:DiffviewFileHistory<CR>', { desc = '[G]it [H]istory' })
