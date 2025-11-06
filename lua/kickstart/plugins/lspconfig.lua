@@ -39,7 +39,9 @@ return {
           map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-          map('K', vim.lsp.buf.hover, 'Hover Documentation')
+          map('K', function()
+            vim.lsp.buf.hover { border = 'rounded' }
+          end, 'Hover Documentation')
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
           -- The following two autocommands are used to highlight references of the
@@ -117,7 +119,7 @@ return {
 
       require('mason-lspconfig').setup {
         ensure_installed = {},
-        automatic_installation = false,
+        automatic_enable = false,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
