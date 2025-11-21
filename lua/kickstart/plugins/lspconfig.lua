@@ -119,7 +119,7 @@ return {
 
       require('mason-lspconfig').setup {
         ensure_installed = {},
-        automatic_enable = false,
+        automatic_enable = true,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
@@ -129,6 +129,20 @@ return {
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             vim.lsp.config[server_name] = server
             vim.lsp.enable(server_name)
+          end,
+          ['omnisharp'] = function()
+            require('lspconfig').omnisharp.setup {
+              on_attach = function(client, bufnr)
+                client.server_capabilities.semanticTokensProvider = nil
+              end,
+
+              -- Optional: other settings
+              settings = {
+                FormattingOptions = {
+                  EnableEditorConfigSupport = true,
+                },
+              },
+            }
           end,
         },
       }
