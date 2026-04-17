@@ -26,6 +26,7 @@ return {
       'regex',
       'tsx',
       'typescript',
+      'vue',
       'vim',
       'vimdoc',
       'xml',
