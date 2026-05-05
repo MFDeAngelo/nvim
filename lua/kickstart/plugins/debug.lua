@@ -80,6 +80,36 @@ return {
       },
     }
 
+    -- C# / .NET debugging
+    dap.adapters.coreclr = {
+      type = 'executable',
+      command = vim.fn.stdpath 'data' .. '/mason/packages/netcoredbg/netcoredbg/netcoredbg.exe',
+      args = { '--interpreter=vscode' },
+    }
+
+    dap.configurations.cs = {
+      {
+        type = 'coreclr',
+        name = 'Launch (netcoredbg)',
+        request = 'launch',
+        program = function()
+          return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopAtEntry = false,
+        env = {
+          ASPNETCORE_ENVIRONMENT = 'local-u',
+          ASPNETCORE_URLS = 'http://localhost:5050',
+        },
+      },
+      {
+        type = 'coreclr',
+        name = 'Attach (netcoredbg)',
+        request = 'attach',
+        processId = require('dap.utils').pick_process,
+      },
+    }
+
     -- Basic debugging keymaps, feel free to change to your liking!
     vim.keymap.set('n', '<F5>', dap.continue, { desc = 'Debug: Start/Continue' })
     vim.keymap.set('n', '<F1>', dap.step_into, { desc = 'Debug: Step Into' })
