@@ -73,11 +73,8 @@ return {
   },
   {
     "tahayvr/matteblack.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme "matteblack"
-    end,
   },
   {
     "gthelding/monokai-pro.nvim",
@@ -121,4 +118,3 @@ return {
     priority = 1000,
   },
 }
-

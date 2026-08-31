@@ -24,7 +24,6 @@ return {
       'printf',
       'query',
       'regex',
-      'tsx',
       'typescript',
       'vue',
       'vim',
