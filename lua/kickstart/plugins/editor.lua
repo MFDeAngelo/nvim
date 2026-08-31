@@ -1,4 +1,50 @@
+
 return {
+  { 
+    'folke/todo-comments.nvim', 
+    event = 'VimEnter', 
+    dependencies = { 'nvim-lua/plenary.nvim' }, 
+    opts = { 
+      signs = false 
+    } 
+  },
+  { -- Useful plugin to show you pending keybinds.
+    'folke/which-key.nvim',
+    event = 'VimEnter', -- Sets the loading event to 'VimEnter'
+    config = function() -- This is the function that runs, AFTER loading
+      require('which-key').setup()
+
+      -- Document existing key chains
+      local wk = require 'which-key'
+      wk.add {
+        { '<leader>c', group = '[C]ode' },
+        { '<leader>c_', hidden = true },
+        { '<leader>d', group = '[D]ocument' },
+        { '<leader>d_', hidden = true },
+        { '<leader>r', group = '[R]ename' },
+        { '<leader>r_', hidden = true },
+        { '<leader>s', group = '[S]earch' },
+        { '<leader>s_', hidden = true },
+        { '<leader>w', group = '[W]orkspace' },
+        { '<leader>w_', hidden = true },
+      }
+    end,
+  },
+  {
+    'lewis6991/gitsigns.nvim',
+    opts = {
+      signs = {
+        add = { text = '+' },
+        change = { text = '~' },
+        delete = { text = '_' },
+        topdelete = { text = '‾' },
+        changedelete = { text = '~' },
+      },
+    },
+  },
+  {
+    'tpope/vim-fugitive',
+  },
   {
     'sindrets/diffview.nvim',
     opts = {
@@ -230,5 +276,5 @@ return {
       },
       --]]
     },
-  },
+  }
 }

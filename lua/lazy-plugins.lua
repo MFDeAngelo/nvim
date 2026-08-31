@@ -30,33 +30,23 @@ require('lazy').setup({
 
   require 'kickstart/plugins/lazydev',
 
-  require 'kickstart/plugins/gitsigns',
-
-  require 'kickstart/plugins/diffview',
-
-  require 'kickstart/plugins/which-key',
-
   require 'kickstart/plugins/telescope',
 
   require 'kickstart/plugins/lspconfig',
 
   require 'kickstart/plugins/none-ls',
 
-  require 'kickstart/plugins/conform',
-
-  require 'kickstart/plugins/cmp',
-
   require 'kickstart/plugins/debug',
 
   require 'kickstart/plugins/theme',
 
-  require 'kickstart/plugins/todo-comments',
+  require 'kickstart/plugins/ui',
+
+  require 'kickstart/plugins/code',
+
+  require 'kickstart/plugins/editor',
 
   require 'kickstart/plugins/treesitter',
-
-  require 'kickstart/plugins/fugitive',
-
-  require 'kickstart/plugins/surround',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

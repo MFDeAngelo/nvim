@@ -1,6 +1,18 @@
 return {
   {
+    'folke/ts-comments.nvim',
+    event = 'VeryLazy',
+    opts = {},
+  },
+  { -- Add indentation guides even on blank lines
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    event = 'VeryLazy',
+    opts = {},
+  },
+  {
     'echasnovski/mini.nvim',
+    event = 'VeryLazy',
     config = function()
       -- Better Around/Inside textobjects
       --
@@ -24,5 +36,8 @@ return {
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
+  },
+  {
+    'tpope/vim-surround',
   },
 }
