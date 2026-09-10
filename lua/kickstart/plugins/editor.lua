@@ -46,6 +46,11 @@ return {
     'tpope/vim-fugitive',
   },
   {
+    'chentoast/marks.nvim',
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
     'sindrets/diffview.nvim',
     opts = {
       diff_binaries = false, -- Show diffs for binaries
